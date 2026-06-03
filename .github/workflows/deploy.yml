@@ -36,6 +36,8 @@ jobs:
         run: npm run build
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          BASE_PATH: /website
+          SITE_URL: https://woic-bln.github.io
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
