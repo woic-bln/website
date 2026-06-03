@@ -39,6 +39,11 @@ jobs:
           BASE_PATH: /website
           SITE_URL: https://woic-bln.github.io
 
+      - name: Verify build output
+        run: node scripts/verify-build.mjs
+        env:
+          BASE_PATH: /website
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
