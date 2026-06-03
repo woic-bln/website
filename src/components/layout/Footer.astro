@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { resolveUrl } from '../../utils/path';
 
 interface Props {
   lang: 'de' | 'en';
@@ -97,12 +98,12 @@ const copyright = globalData.data.footer.copyright.replace('{year}', currentYear
         </h3>
         <ul class="space-y-2 text-sm">
           <li>
-            <a href={`${import.meta.env.BASE_URL}${lang}/privacy`} class="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
+            <a href={resolveUrl(`/${lang}/privacy`)} class="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
               {globalData.data.footer.legal.privacy}
             </a>
           </li>
           <li>
-            <a href={`${import.meta.env.BASE_URL}${lang}/imprint`} class="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
+            <a href={resolveUrl(`/${lang}/imprint`)} class="text-neutral-600 dark:text-neutral-400 hover:text-primary-600 dark:hover:text-primary-400">
               {globalData.data.footer.legal.imprint}
             </a>
           </li>

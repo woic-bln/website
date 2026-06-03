@@ -81,8 +81,8 @@ const structuredData = {
     {seo?.image && <meta property="twitter:image" content={seo.image} />}
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}assets/images/ChurchLogo.png`} />
-    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}assets/images/ChurchLogo.png`} />
+    <link rel="icon" type="image/png" href={resolveUrl('/assets/images/ChurchLogo.png')} />
+    <link rel="apple-touch-icon" href={resolveUrl('/assets/images/ChurchLogo.png')} />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

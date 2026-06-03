@@ -22,7 +22,7 @@ const switchUrl = `${base}/${otherLang}${currentPathWithoutLang || '/'}`;
       <!-- Church Name/Logo -->
       <div class="flex items-center space-x-3">
         <img
-          src={globalData.data.organization.logo}
+          src={resolveUrl(globalData.data.organization.logo)}
           alt="Church Logo"
           class="h-10 w-auto"
           width="40"
