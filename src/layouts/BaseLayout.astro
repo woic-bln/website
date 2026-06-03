@@ -21,9 +21,10 @@ const pageDescription = seo?.description || description;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 // Language alternates
-const currentPathWithoutLang = Astro.url.pathname.replace(/^\/woic\/(de|en)/, '') || '/';
-const deUrl = new URL(`/woic/de${currentPathWithoutLang}`, Astro.site);
-const enUrl = new URL(`/woic/en${currentPathWithoutLang}`, Astro.site);
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const currentPathWithoutLang = Astro.url.pathname.replace(new RegExp(`^${base}/(de|en)`), '') || '/';
+const deUrl = new URL(`${base}/de${currentPathWithoutLang}`, Astro.site);
+const enUrl = new URL(`${base}/en${currentPathWithoutLang}`, Astro.site);
 
 // Structured data for Church from global config
 const structuredData = {
@@ -79,8 +80,8 @@ const structuredData = {
     {seo?.image && <meta property="twitter:image" content={seo.image} />}
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/woic/assets/images/ChurchLogo.png" />
-    <link rel="apple-touch-icon" href="/woic/assets/images/ChurchLogo.png" />
+    <link rel="icon" type="image/png" href={`${import.meta.env.BASE_URL}assets/images/ChurchLogo.png`} />
+    <link rel="apple-touch-icon" href={`${import.meta.env.BASE_URL}assets/images/ChurchLogo.png`} />
 
     <!-- Structured Data -->
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />

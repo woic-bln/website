@@ -10,8 +10,9 @@ const globalData = await getEntry('global', lang);
 
 const currentPath = Astro.url.pathname;
 const otherLang = lang === 'de' ? 'en' : 'de';
-const currentPathWithoutLang = Astro.url.pathname.replace(/^\/woic\/(de|en)/, '');
-const switchUrl = `/woic/${otherLang}${currentPathWithoutLang || '/'}`;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const currentPathWithoutLang = Astro.url.pathname.replace(new RegExp(`^${base}/(de|en)`), '');
+const switchUrl = `${base}/${otherLang}${currentPathWithoutLang || '/'}`;
 ---
 
 <header class="bg-white dark:bg-neutral-900 shadow-sm border-b border-neutral-200 dark:border-neutral-700">
