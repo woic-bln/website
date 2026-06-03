@@ -66,7 +66,7 @@ sections:
       <div class="flex flex-col md:flex-row items-center gap-8 max-w-3xl mx-auto">
         <div class="md:w-1/2">
           <img
-            src="/woic/assets/images/PastorIsaacStella.jpg"
+            src="/assets/images/PastorIsaacStella.jpg"
             alt="Pastor and Stella Oppong"
             loading="lazy"
             class="rounded-2xl shadow-lg w-full"
@@ -91,7 +91,7 @@ sections:
         description: "In-person and via Zoom. Join us for worship, teaching, and fellowship. Various group options available."
         button:
           label: "Service Times"
-          href: "/woic/en/services"
+          href: "/en/services"
       - title: "Children & Youth Groups"
         time: "Sundays, 12:00 - 12:45"
         description: "Programs for children and young people up to 16 years old. A place to grow in faith and friendships."
@@ -100,4 +100,4 @@ sections:
         description: "Join us in prayer at 5:00 AM, 12:00 PM, and 8:00 PM. Dial 030 5201 4350 to connect."
         button:
           label: "More Details"
-          href: "/woic/en/services"
+          href: "/en/services"

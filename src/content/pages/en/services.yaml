@@ -89,4 +89,4 @@ sections:
     content: "Watch our sermons and past services on our media page."
     button:
       text: "Watch Sermons"
-      href: "/woic/en/media"
+      href: "/en/media"

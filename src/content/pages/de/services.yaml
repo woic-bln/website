@@ -89,4 +89,4 @@ sections:
     content: "Schauen Sie sich unsere Predigten und vergangene Gottesdienste auf unserer Medienseite an."
     button:
       text: "Predigten ansehen"
-      href: "/woic/de/media"
+      href: "/de/media"

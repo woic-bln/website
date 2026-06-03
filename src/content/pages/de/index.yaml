@@ -5,14 +5,14 @@ meta:
 hero:
   title: "Willkommen bei WOIC Berlin"
   subtitle: "Unsere Kirche ist offen für Menschen aller Nationen"
-  image: "/woic/assets/images/ChurchBuilding.jpg"
+  image: "/assets/images/ChurchBuilding.jpg"
   buttons:
     - label: "Mehr erfahren"
-      href: "/woic/de/about"
+      href: "/de/about"
       variant: "primary"
       className: "bg-white text-primary-600 hover:bg-neutral-100"
     - label: "Kontakt aufnehmen"
-      href: "/woic/de/contact"
+      href: "/de/contact"
       variant: "secondary"
 
 sections:
@@ -30,17 +30,17 @@ sections:
         description: "Jeden Sonntag von 11:00 bis 13:30 Uhr, sowohl vor Ort als auch über Zoom. Kommen Sie und beten Sie mit uns."
         button:
           label: "Zeiten ansehen"
-          href: "/woic/de/services"
+          href: "/de/services"
       - title: "Gebetstelefon"
         description: "Nehmen Sie an unserem Gebetstelefon teil, Montag bis Samstag, dreimal täglich. Gemeinsam im Gebet."
         button:
           label: "Mehr erfahren"
-          href: "/woic/de/services"
+          href: "/de/services"
       - title: "Gemeinschaft"
         description: "Lernen Sie uns kennen und werden Sie Teil unserer wachsenden Gemeinde von Menschen aller Nationen."
         button:
           label: "Über uns"
-          href: "/woic/de/about"
+          href: "/de/about"
 
   - type: "html"
     background: "white"
@@ -67,7 +67,7 @@ sections:
       text: "Bleiben Sie auf dem Laufenden über unsere neuesten Nachrichten, Veranstaltungen und Predigten."
       button:
         label: "Alle Veranstaltungen"
-        href: "/woic/de/events"
+        href: "/de/events"
 
   - type: "instagram"
     title: "Folgen Sie uns auf Instagram"
@@ -80,5 +80,5 @@ sections:
       consent:
         message: "Mit dem Laden des Instagram-Beitrags wird eine Verbindung zu Instagram/Meta hergestellt. Ihre IP-Adresse wird an Instagram-Server übermittelt."
         buttonLabel: "Instagram-Beitrag laden"
-        privacyLink: "/woic/de/privacy"
+        privacyLink: "/de/privacy"
         privacyLinkText: "Unsere Datenschutzerklärung"

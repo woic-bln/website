@@ -62,4 +62,4 @@ sections:
     content: "Möchten Sie über unsere Veranstaltungen und Sonderprogramme auf dem Laufenden bleiben? Kontaktieren Sie uns, oder folgen Sie uns in den sozialen Medien."
     button:
       text: "Kontakt aufnehmen"
-      href: "/woic/de/contact"
+      href: "/de/contact"

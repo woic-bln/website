@@ -8,6 +8,7 @@ import Section from '../../components/ui/Section.astro';
 import Card from '../../components/ui/Card.astro';
 import Button from '../../components/ui/Button.astro';
 import InstagramEmbed from '../../components/ui/InstagramEmbed.astro';
+import { resolveUrl } from '../../utils/path';
 
 const lang = 'de';
 const pageData = await getEntry('pages', `${lang}/index`);
@@ -24,13 +25,13 @@ const pageData = await getEntry('pages', `${lang}/index`);
     <Hero
       title={pageData.data.hero.title}
       subtitle={pageData.data.hero.subtitle}
-      image={pageData.data.hero.image}
+      image={pageData.data.hero.image ? resolveUrl(pageData.data.hero.image) : undefined}
     >
       {pageData.data.hero.buttons && (
         <div class="flex gap-4 justify-center">
           {pageData.data.hero.buttons.map(btn => (
             <Button
-              href={btn.href}
+              href={resolveUrl(btn.href)}
               variant={btn.variant}
               class={btn.className}
             >
@@ -60,7 +61,7 @@ const pageData = await getEntry('pages', `${lang}/index`);
                   {card.description}
                 </p>
                 {card.button && (
-                  <Button href={card.button.href} variant="primary" class="w-full">
+                  <Button href={resolveUrl(card.button.href)} variant="primary" class="w-full">
                     {card.button.label}
                   </Button>
                 )}
@@ -96,7 +97,7 @@ const pageData = await getEntry('pages', `${lang}/index`);
                 {section.cta?.text}
               </p>
               {section.cta?.button && (
-                <Button href={section.cta.button.href} variant="primary">
+                <Button href={resolveUrl(section.cta.button.href)} variant="primary">
                   {section.cta.button.label}
                 </Button>
               )}
@@ -135,7 +136,7 @@ const pageData = await getEntry('pages', `${lang}/index`);
               posts={section.instagram.posts}
               consentMessage={section.instagram.consent.message}
               consentButtonLabel={section.instagram.consent.buttonLabel}
-              privacyLink={section.instagram.consent.privacyLink}
+              privacyLink={section.instagram.consent.privacyLink ? resolveUrl(section.instagram.consent.privacyLink) : undefined}
               privacyLinkText={section.instagram.consent.privacyLinkText}
             />
           )}

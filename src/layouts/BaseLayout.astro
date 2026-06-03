@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { resolveUrl } from '../utils/path';
 import '../styles/global.css';
 
 interface Props {
@@ -32,7 +33,7 @@ const structuredData = {
   "@type": "Church",
   "name": globalData.data.organization.name,
   "url": globalData.data.organization.url,
-  "logo": new URL(globalData.data.organization.logo, Astro.site).href,
+  "logo": new URL(resolveUrl(globalData.data.organization.logo), Astro.site).href,
   "address": {
     "@type": "PostalAddress",
     "streetAddress": globalData.data.organization.address.street,

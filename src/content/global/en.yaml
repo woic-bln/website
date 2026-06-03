@@ -6,8 +6,8 @@ site:
 
 organization:
   name: "Word of Faith Outreach International Center e.V."
-  url: "https://fredericrisling.github.io/woic"
-  logo: "/woic/assets/images/ChurchLogo.png"
+  url: "https://woic-bln.org"
+  logo: "/assets/images/ChurchLogo.png"
   address:
     street: "Amendestraße 15"
     city: "Berlin"
@@ -17,19 +17,19 @@ organization:
   email: "woic@woic-bln.org"
 
 navigation:
-  - href: "/woic/en"
+  - href: "/en"
     label: "Home"
-  - href: "/woic/en/about"
+  - href: "/en/about"
     label: "About"
-  - href: "/woic/en/services"
+  - href: "/en/services"
     label: "Services"
-  - href: "/woic/en/events"
+  - href: "/en/events"
     label: "Events"
-  - href: "/woic/en/media"
+  - href: "/en/media"
     label: "Media"
-  - href: "/woic/en/contact"
+  - href: "/en/contact"
     label: "Contact"
-  - href: "/woic/en/donations"
+  - href: "/en/donations"
     label: "Donations"
 
 footer:

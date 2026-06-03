@@ -1,5 +1,6 @@
 ---
 import { getEntry } from 'astro:content';
+import { resolveUrl } from '../../utils/path';
 
 interface Props {
   lang: 'de' | 'en';
@@ -36,7 +37,7 @@ const switchUrl = `${base}/${otherLang}${currentPathWithoutLang || '/'}`;
       <nav class="hidden md:flex items-center space-x-6">
         {globalData.data.navigation.map((item) => (
           <a
-            href={item.href}
+            href={resolveUrl(item.href)}
             class={`text-sm font-medium transition-colors ${
               currentPath === item.href || currentPath.startsWith(item.href + '/')
                 ? 'text-primary-600 dark:text-primary-400'
@@ -80,7 +81,7 @@ const switchUrl = `${base}/${otherLang}${currentPathWithoutLang || '/'}`;
       <nav class="px-4 py-4 space-y-2">
         {globalData.data.navigation.map((item) => (
           <a
-            href={item.href}
+            href={resolveUrl(item.href)}
             class={`block py-2 px-3 rounded-lg text-sm font-medium transition-colors ${
               currentPath === item.href || currentPath.startsWith(item.href + '/')
                 ? 'bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-400'

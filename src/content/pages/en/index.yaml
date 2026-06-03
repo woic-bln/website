@@ -5,14 +5,14 @@ meta:
 hero:
   title: "Welcome to WOIC Berlin"
   subtitle: "Our church is open to people of all nations"
-  image: "/woic/assets/images/ChurchBuilding.jpg"
+  image: "/assets/images/ChurchBuilding.jpg"
   buttons:
     - label: "Learn More"
-      href: "/woic/en/about"
+      href: "/en/about"
       variant: "primary"
       className: "bg-white text-primary-600 hover:bg-neutral-100"
     - label: "Get in Touch"
-      href: "/woic/en/contact"
+      href: "/en/contact"
       variant: "secondary"
 
 sections:
@@ -30,17 +30,17 @@ sections:
         description: "Every Sunday from 11:00 to 13:30, both in-person and on Zoom. Come and worship with us."
         button:
           label: "View Times"
-          href: "/woic/en/services"
+          href: "/en/services"
       - title: "Prayer Line"
         description: "Join our telephone prayer line Monday to Saturday, three times daily. Together in prayer."
         button:
           label: "Learn More"
-          href: "/woic/en/services"
+          href: "/en/services"
       - title: "Community"
         description: "Get to know us and become part of our growing congregation of people from all nations."
         button:
           label: "About Us"
-          href: "/woic/en/about"
+          href: "/en/about"
 
   - type: "html"
     background: "white"
@@ -67,7 +67,7 @@ sections:
       text: "Stay updated with our latest news, events, and sermons."
       button:
         label: "All Events"
-        href: "/woic/en/events"
+        href: "/en/events"
 
   - type: "instagram"
     title: "Follow Us on Instagram"
@@ -80,5 +80,5 @@ sections:
       consent:
         message: "Loading this post will connect to Instagram/Meta servers. Your IP address will be transmitted to Instagram."
         buttonLabel: "Load Instagram post"
-        privacyLink: "/woic/en/privacy"
+        privacyLink: "/en/privacy"
         privacyLinkText: "Our Privacy Policy"

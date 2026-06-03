@@ -62,4 +62,4 @@ sections:
     content: "Would you like to stay updated about our events and special programs? Contact us, or follow us on our social media channels."
     button:
       text: "Contact Us"
-      href: "/woic/en/contact"
+      href: "/en/contact"
