@@ -5,7 +5,7 @@ on:
     branches: [main]
   schedule:
     # Every Sunday at 10:45 UTC = 11:45 CET (Berlin winter) / 12:45 CEST (Berlin summer)
-    - cron: '45 10 * * 0'
+    - cron: '45 09 * * 0'
   workflow_dispatch:
 
 permissions:
