@@ -8,7 +8,7 @@ export interface YouTubeVideo {
   thumbnailUrl: string;
 }
 
-export async function getLatestVideos(channelHandle: string, count: number = 4): Promise<YouTubeVideo[]> {
+export async function getLatestVideos(channelHandle: string, count: number = 11): Promise<YouTubeVideo[]> {
   const apiKey = import.meta.env.YOUTUBE_API_KEY;
   if (!apiKey) {
     console.warn('[YouTube] No YOUTUBE_API_KEY set — skipping video fetch.');

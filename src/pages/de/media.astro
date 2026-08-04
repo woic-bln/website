@@ -12,10 +12,10 @@ import { getLatestVideos } from '../../lib/youtube';
 const lang = 'de';
 const pageData = await getEntry('pages', `${lang}/media`);
 
-// Fetch the latest YouTube videos at build time (1 featured + 3 for the grid)
+// Fetch the latest YouTube videos at build time (1 featured + 9 for the grid)
 const youtubeSection = pageData.data.sections.find(s => s.youtubeEmbed);
 const videos = youtubeSection?.youtubeEmbed
-  ? await getLatestVideos(youtubeSection.youtubeEmbed, 4)
+  ? await getLatestVideos(youtubeSection.youtubeEmbed)
   : [];
 const latestVideo = videos[0] ?? null;
 const previousVideos = videos.slice(1);
