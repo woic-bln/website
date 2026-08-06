@@ -116,6 +116,7 @@ const pagesCollection = defineCollection({
 
       // For events sections
       events: z.array(z.object({
+        id: z.string().optional(),
         badge: z.string(),
         badgeColor: z.enum(['primary', 'accent']),
         title: z.string(),

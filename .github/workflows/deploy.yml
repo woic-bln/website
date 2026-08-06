@@ -69,7 +69,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Install dependencies
         run: npm ci
@@ -80,6 +80,23 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           BASE_PATH: /
           SITE_URL: ${{ secrets.CPANEL_SITE_URL }}
+
+      - name: Inject PHP DB config
+        run: |
+          node -e "
+          const fs = require('fs');
+          const cfg = '<?php\n' +
+            'define(\"DB_HOST\", ' + JSON.stringify(process.env.H) + ');\n' +
+            'define(\"DB_NAME\", ' + JSON.stringify(process.env.N) + ');\n' +
+            'define(\"DB_USER\", ' + JSON.stringify(process.env.U) + ');\n' +
+            'define(\"DB_PASS\", ' + JSON.stringify(process.env.P) + ');\n';
+          fs.writeFileSync('dist/api/config.php', cfg);
+          "
+        env:
+          H: ${{ secrets.CPANEL_DB_HOST }}
+          N: ${{ secrets.CPANEL_DB_NAME }}
+          U: ${{ secrets.CPANEL_DB_USER }}
+          P: ${{ secrets.CPANEL_DB_PASS }}
 
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

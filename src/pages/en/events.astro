@@ -6,6 +6,7 @@ import Footer from '../../components/layout/Footer.astro';
 import Hero from '../../components/ui/Hero.astro';
 import Section from '../../components/ui/Section.astro';
 import Card from '../../components/ui/Card.astro';
+import JoinButton from '../../components/ui/JoinButton';
 
 const lang = 'en';
 const pageData = await getEntry('pages', `${lang}/events`);
@@ -55,6 +56,7 @@ const pageData = await getEntry('pages', `${lang}/events`);
                       : event.location}
                   </p>
                 )}
+                {event.id && <JoinButton client:load eventId={event.id} lang="en" />}
               </Card>
             ))}
           </div>
